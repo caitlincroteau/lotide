@@ -22,7 +22,34 @@ const assertArraysEqual = function(array1, array2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-
-
+  for (let i = 0; i < sentence.length; i++) {
+    let letter = sentence[i];
+    if (results[letter]) {
+      results[letter].push(i);
+    } else {
+      results[letter] = [i];
+    }
+  }
   return results;
 };
+
+/*
+
+inputs a sentence and returns an object of arrays
+each key refers to a letter of the sentence
+each value is an array listing which indexes the letter is at
+
+
+input: STRING
+
+output: Object with arrays of indexes
+
+*/
+
+
+const string1 = "hello";
+
+assertArraysEqual(letterPositions(string1).h, [0]);
+assertArraysEqual(letterPositions(string1).e, [1]);
+assertArraysEqual(letterPositions(string1).l, [2, 3]);
+assertArraysEqual(letterPositions(string1).o, [4]);
