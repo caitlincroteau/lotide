@@ -18,12 +18,12 @@ const countLetters = function(string) {
     }
   }
   return letters;
-}
+};
 
 
 const string1 = "cait is so cool";
 const string2 = "little lily";
-const string3 = "ogopogo"
+const string3 = "ogopogo";
 
 
 
