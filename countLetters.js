@@ -17,7 +17,6 @@ const countLetters = function(string) {
       }
     }
   }
-  //console.log(letters);
   return letters;
 }
 
@@ -27,9 +26,22 @@ const string2 = "little lily";
 const string3 = "ogopogo"
 
 
-assertEqual(countLetters(string1), {c: 2, a: 1, i: 2, t: 1, s: 2, o: 3, l: 1});
-assertEqual(countLetters(string2), {l: 4, i: 2, t: 2, e: 1, y: 1});
-assertEqual(countLetters(string3), {o: 4, g: 2, p: 1});
 
+const result1 = countLetters(string1);
+//{c: 2, a: 1, i: 2, t: 1, s: 2, o: 3, l: 1}
+assertEqual(result1["c"], 2);
+assertEqual(result1["a"], 1);
+assertEqual(result1["o"], 3);
+assertEqual(result1["p"], undefined);
 
-//console.log(countLetters(string1));
+const result2 = countLetters(string2);
+//{ l: 4, i: 2, t: 2, e: 1, y: 1 }
+assertEqual(result2["l"], 4);
+assertEqual(result2["t"], 2);
+assertEqual(result2["y"], 1);
+assertEqual(result2["m"], undefined);
+
+const result3 = countLetters(string3);
+//{ o: 4, g: 2, p: 1 }
+assertEqual(result3["o"], 4);
+assertEqual(result3["y"], undefined);
