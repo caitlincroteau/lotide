@@ -27,10 +27,10 @@ const countOnly = function(allItems, itemsToCount) {
       } else {
         results[item] = 1;
       }
-    }  
-  } 
+    }
+  }
   return results;
-}
+};
 
 
 /*
