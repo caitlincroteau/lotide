@@ -33,6 +33,13 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+
+const string1 = "hello";
+assertArraysEqual(letterPositions(string1).h, [0]);
+assertArraysEqual(letterPositions(string1).e, [1]);
+assertArraysEqual(letterPositions(string1).l, [2, 3]);
+assertArraysEqual(letterPositions(string1).o, [4]);
+
 /*
 
 inputs a sentence and returns an object of arrays
@@ -45,11 +52,3 @@ input: STRING
 output: Object with arrays of indexes
 
 */
-
-
-const string1 = "hello";
-
-assertArraysEqual(letterPositions(string1).h, [0]);
-assertArraysEqual(letterPositions(string1).e, [1]);
-assertArraysEqual(letterPositions(string1).l, [2, 3]);
-assertArraysEqual(letterPositions(string1).o, [4]);
