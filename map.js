@@ -31,6 +31,9 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 
+//MAP FUNCTION:
+
+
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -39,22 +42,47 @@ const map = function(array, callback) {
   return results
 };
 
+
+//TESTS:
+
+console.log("TEST 1");
 const words = ["ground", "control", "to", "major", "tom"];
 const results1 = map(words, word => word[0]);
-console.log(results1);
 
+//PASS
+console.log("passing tests:")
 assertArraysEqual(words, ["ground", "control", "to", "major", "tom"]);
 assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
 assertArraysEqual(["g", "c", "t", "m", "t"], map(words, word => word[0]));
 
+//FAIL
+console.log("failing tests:")
+assertArraysEqual(results1, ["ground", "control", "to", "major", "tom"]);
+
+console.log("---");
+
+console.log("TEST 2");
 const empty = [];
 const results2 = map(empty, item => item[0]);
-console.log(results2);
 
+//PASS
+console.log("passing tests");
 assertArraysEqual(results2, []);
 
+//FAIL
+console.log("failing tests");
+assertArraysEqual(results2, [1]);
+
+console.log("---");
+
+console.log("TEST 3");
 const numbers = [1, 5, -12];
 const results3 = map(numbers, item => item[0]);
-console.log(results3);
 
+//PASS
+console.log("passing tests");
 assertArraysEqual(results3, [undefined, undefined, undefined]);
+
+//FAIL
+console.log("failing tests");
+assertArraysEqual(results3, [1, 5, -12]);
