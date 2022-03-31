@@ -39,7 +39,7 @@ const map = function(array, callback) {
   for (let item of array) {
     results.push(callback(item));
   }
-  return results
+  return results;
 };
 
 
@@ -50,13 +50,13 @@ const words = ["ground", "control", "to", "major", "tom"];
 const results1 = map(words, word => word[0]);
 
 //PASS
-console.log("passing tests:")
+console.log("passing tests:");
 assertArraysEqual(words, ["ground", "control", "to", "major", "tom"]);
 assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
 assertArraysEqual(["g", "c", "t", "m", "t"], map(words, word => word[0]));
 
 //FAIL
-console.log("failing tests:")
+console.log("failing tests:");
 assertArraysEqual(results1, ["ground", "control", "to", "major", "tom"]);
 
 console.log("---");
