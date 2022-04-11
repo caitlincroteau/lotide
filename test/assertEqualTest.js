@@ -1,20 +1,11 @@
 const assertEqual = require('../assertEqual');
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-//fail
+console.log("this code will pass:");
 assertEqual(1, 1);
-//pass
 assertEqual("Caitlin", "Caitlin");
-//pass
+
+console.log("---");
+
+console.log("this code will fail:");
+assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(130, 13);
-//fail
-
-/*
-output:
-
-Assertion Failed: Lighthouse Labs !== Bootcamp
-Assertion Passed: 1 === 1
-Assertion Passed: Caitlin === Caitlin
-Assertion Failed: 130 !== 13
-
-*/
