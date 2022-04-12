@@ -1,21 +1,20 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-//test to ensure tail creates and returns a new array and does not alter the original array.
-const words = ["yo yo", "lighthouse", "labs"];
-console.log("original array:", words);
-console.log("new array:", tail(words));
-assertEqual(words.length, 3);
-//true
+describe('#tail', () => {
+  it("returns ['lighthouse', 'labs'] for ['howdy', 'lighthouse', 'labs']", () => {
+    assert.deepEqual(tail(['howdy', 'lighthouse', 'labs']), ['lighthouse', 'labs']);
+  });
 
-const numbers = [1];
-console.log("original array:", numbers);
-console.log("new array:", tail(numbers));
-assertEqual(numbers.length, 1);
-//true
+  it("returns [4] for [3, 4]", () => {
+    assert.deepEqual(tail([3, 4]), [4]);
+  });
 
-const emptyArray = [];
-console.log("original array:", emptyArray);
-console.log("new array:", tail(emptyArray));
-assertEqual(emptyArray.length, 0);
-//true
+  it("returns [] for [1]", () => {
+    assert.deepEqual(tail([1]), []);
+  });
+
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
+});
