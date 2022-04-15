@@ -1,6 +1,6 @@
 {
   "name": "@caitlincroteau/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JavaScript library inspired by Lodash and built as a learning tool at Lighthouse Labs",
   "main": "assertArraysEqual.js",
   "directories": {
