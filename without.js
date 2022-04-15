@@ -1,5 +1,5 @@
 //without function - takes in a source array and a itemsToRemove array.
-//returns a subset of a source array, removing unwanted elements. 
+//returns a subset of a source array, removing unwanted elements.
 //Should return a new array and not modify the original array.
 
 const eqArrays = function(array1, array2) {
@@ -41,9 +41,8 @@ assertArraysEqual(without(["A", "Long", "Adventure"], ["A", "Adventure"]), ["Lon
 assertArraysEqual(without(["Time", "Travel", 2050], []), ["Time", "Travel", 2050]);
 
 const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); 
+without(words, ["lighthouse"]);
 // no need to capture return value for this test case
 
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-
