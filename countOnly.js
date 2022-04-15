@@ -1,24 +1,5 @@
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-//   } else {
-//     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
-
 //countOnly function - takes in a collection of items and returns counts for a specific subset of those items.
-
-/*
-
-input: Array, Object
-
-use object T/F info to count appropriate infor in the array and return those counts
-in a new object
-
-output:
-object that contains counts of everythig the input OBJECT listed.
-
-*/
+//will be given an array and an object. returns an object containing counts of everything that the input object listed.
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
