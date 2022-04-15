@@ -21,7 +21,6 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-
 const takeUntil = function(array, callback) {
   const slicedArray = [];
   for (const item of array) {
@@ -33,27 +32,12 @@ const takeUntil = function(array, callback) {
   return slicedArray;
 };
 
-
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
-console.log("results1: ", results1);
-
-console.log('---');
 
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
-console.log("results2, ", results2);
 
-console.log("---");
-
-/*
-expect output:
-
-[ 1, 2, 5, 7, 2 ]
---
-[ 'I\'ve', 'been', 'to', 'Hollywood' ]
-
-*/
 console.log("PASSING TESTS");
 //PASS
 assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ]);
@@ -66,6 +50,11 @@ console.log("FAILING TESTS");
 assertArraysEqual(results1, [1, 2, 5, 7, 2, -1, 2, 4, 5]);
 assertArraysEqual(results2, ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"]);
 
+/*
+expected output:
 
+[ 1, 2, 5, 7, 2 ]
+--
+[ 'I\'ve', 'been', 'to', 'Hollywood' ]
 
-
+*/
