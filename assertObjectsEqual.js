@@ -1,3 +1,5 @@
+//assertObjectsEqual function - compares two objects and prints out a message telling us if they match or not.
+
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -10,11 +12,6 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
-
-/*
-input: 2 objects
-returns true or false based on their match
-*/
 
 const eqObjects = function(object1, object2) {
 
@@ -47,23 +44,29 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
+//TESTS:
+
 const cd = {c: "1", d: ["2", 3]};
 const dc = {d: ["2", 3], c: "1"};
 const cd2 = {c: "1", d: ["2", 3, 4]};
-assertObjectsEqual(cd, dc);
-//pass
-assertObjectsEqual(cd, cd2);
-//fail
-
 const ab = {a: "1", b: "2"};
 const ba = {b: "2", a: "1"};
 const abc = {a: "1", b: "2", c: "3"};
-assertObjectsEqual(ab, ba);
-//pass
-assertObjectsEqual(ab, abc);
-//fail
-
 const empty = {};
 const empty2 = {};
+
+console.log("Passing Tests:");
+assertObjectsEqual(cd, dc);
+//pass
+assertObjectsEqual(ab, ba);
+//pass
 assertObjectsEqual(empty, empty2);
 //pass
+
+console.log("---");
+
+console.log("Failing Tests:");
+assertObjectsEqual(cd, cd2);
+//fail
+assertObjectsEqual(ab, abc);
+//fail
