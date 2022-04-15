@@ -1,14 +1,10 @@
-/*
+//map function - takes in two arguments:
 
-Our map function will take in two arguments:
+// An array to map
+// A callback function
 
-An array to map
-A callback function
+// The map function will return a new array based on the results of the callback function.
 
-The map function will return a new array based on the results of the callback function.
-
-
-*/
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;

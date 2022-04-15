@@ -1,10 +1,12 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
+
+//countOnly function - takes in a collection of items and returns counts for a specific subset of those items.
 
 /*
 
@@ -33,47 +35,4 @@ const countOnly = function(allItems, itemsToCount) {
 };
 
 
-/*
-
-const firstNames = [
-  "Dani",
-  "Ken",
-  "Alisma",
-  "Caitlin",
-  "Colton",
-  "Robyn",
-  "Kim",
-  "Caitlin",
-  "Benji"
-];
-
-
-const result1 = countOnly(firstNames, {"Ken": true, "Lily": true, "Caitlin": true, "Benji": false});
-
-assertEqual(result1["Ken"], 1);
-assertEqual(result1["Lily"], undefined);
-assertEqual(result1["Caitlin"], 2);
-assertEqual(result1["Benji"], undefined);
-
-*/
-
-
-const firstNames2 = [
-  "Lisa",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-
-const result2 = countOnly(firstNames2, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-assertEqual(result2["Jason"], 1);
-assertEqual(result2["Karima"], undefined);
-assertEqual(result2["Fang"], 2);
-assertEqual(result2["Agouhanna"], undefined);
+module.exports = countOnly;
