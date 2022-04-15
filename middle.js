@@ -5,13 +5,15 @@
 
 const middle = function(array) {
   let middleArray = [];
+  let midIndex = array.length / 2;
+
   if (array.length < 3) {
     return middleArray;
   } else if (array.length % 2 !== 0) {
-    middleArray.push(Math.ceil(array.length / 2));
+    middleArray.push(Math.ceil(midIndex));
   } else {
-    middleArray.push(array.length / 2);
-    middleArray.push(array.length / 2 + 1);
+    middleArray.push(midIndex);
+    middleArray.push(midIndex + 1);
   }
   return middleArray;
 };

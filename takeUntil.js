@@ -24,7 +24,7 @@ const assertArraysEqual = function(array1, array2) {
 const takeUntil = function(array, callback) {
   const slicedArray = [];
   for (const item of array) {
-    if (callback(item) === true) {
+    if (callback(item)) {
       return slicedArray;
     }
     slicedArray.push(item);
