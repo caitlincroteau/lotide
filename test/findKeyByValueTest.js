@@ -8,10 +8,10 @@ const bestTVShowsByGenre = {
 };
 
 const bestSongByBand = {
-    theWarOnDrugs: "Red Eyes",
-    bigBang: "Fantastic Baby",
-    comTruise:  "Propagation"
-  };
+  theWarOnDrugs: "Red Eyes",
+  bigBang: "Fantastic Baby",
+  comTruise:  "Propagation"
+};
 
 describe("#findKeyByValue", () => {
   it("returns 'drama' for (bestTVShowsByGenre,'The Wire')", () => {

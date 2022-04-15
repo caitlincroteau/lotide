@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const letterPositions = require('../letterPositions')
+const letterPositions = require('../letterPositions');
 
 describe("#letterPositions", () => {
   it("returns [0] for ('hello').h", () => {
