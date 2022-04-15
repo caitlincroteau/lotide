@@ -1,9 +1,5 @@
-//map function - takes in two arguments:
-
-// An array to map
-// A callback function
-
-// The map function will return a new array based on the results of the callback function.
+//map function - takes an array and a callback function. 
+//returns a new array based on the results of the callback function.
 
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
@@ -26,10 +22,6 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-
-//MAP FUNCTION:
-
-
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -37,7 +29,6 @@ const map = function(array, callback) {
   }
   return results;
 };
-
 
 //TESTS:
 
