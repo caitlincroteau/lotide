@@ -1,3 +1,5 @@
+//index of all functions in lotide library
+
 const assertArraysEqual = require('./assertArraysEqual');
 const assertEqual = require('./assertEqual');
 const assertObjectsEqual = require('./assertObjectsEqual');
