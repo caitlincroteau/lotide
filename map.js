@@ -1,4 +1,4 @@
-//map function - takes an array and a callback function. 
+//map function - takes an array and a callback function.
 //returns a new array based on the results of the callback function.
 
 const eqArrays = function(array1, array2) {
