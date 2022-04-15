@@ -1,3 +1,5 @@
+//countLetters function - takes in a sentence, as a string, and returns a count of each of the letters in that sentence.
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -20,12 +22,11 @@ const countLetters = function(string) {
   return letters;
 };
 
+//TESTS:
 
 const string1 = "cait is so cool";
 const string2 = "little lily";
 const string3 = "ogopogo";
-
-
 
 const result1 = countLetters(string1);
 //{c: 2, a: 1, i: 2, t: 1, s: 2, o: 3, l: 1}
