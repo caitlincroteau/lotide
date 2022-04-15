@@ -1,4 +1,4 @@
-//compares two arrays it takes in and prints out a message telling us if they match or not.
+//assertArraysEqual function - compares two arrays it takes in and prints out a message telling us if they match or not.
 
 const eqArrays = require('./eqArrays');
 
