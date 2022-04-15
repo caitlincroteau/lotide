@@ -1,3 +1,6 @@
+//flatten function - takes in an array containing elements, including nested arrays of elements.
+//returns a "flattened" version of the array. Only handles one level of nesting.
+
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -19,9 +22,6 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-//Create a function flatten which will take in an array containing elements
-//including nested arrays of elements, and return a "flattened" version of the array.
-
 const flatten = function(array) {
   let newArray = [];
   for (const element of array) {
@@ -35,6 +35,8 @@ const flatten = function(array) {
   }
   return newArray;
 };
+
+//TESTS:
 
 const array1 = [1, 2, ["caitlin", "is", "cool"], 120];
 assertArraysEqual(flatten(array1), [1, 2, "caitlin", "is", "cool", 120]);
@@ -50,11 +52,3 @@ const array6 = ["all", "is", "well", []];
 assertArraysEqual(flatten(array6), ["all", "is", "well"]);
 const array7 = ["all", "is", "well"];
 assertArraysEqual(flatten(array7), ["all", "is", "well"]);
-
-
-/*
-testing
-let array = [1, 2, 1, 4, 7];
-console.log(Array.isArray(array));
-console.log(typeof array);
-*/
